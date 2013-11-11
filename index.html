@@ -27,7 +27,22 @@
   far.position.y = 0;
   stage.addChild(far);
 
+  var midTexture = PIXI.Texture.fromImage("images/frog-with-an-umbrella.jpg");
+  mid = new PIXI.Sprite(midTexture);
+  mid.position.x = 0;
+  mid.position.y = 128;
+  stage.addChild(mid);
+
+  //renderer.render(stage);
+function update() {
+  far.position.x -= 0.128;
+  mid.position.x -= 0.64;
+
   renderer.render(stage);
+
+  requestAnimFrame(update);
+}
+  requestAnimFrame(update);
 }
   </script>
 </body>
